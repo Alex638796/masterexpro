@@ -1,0 +1,86 @@
+{
+    "name": "MasterExPro",
+    "description": "Master Extractor Bot for Telegram, built with Pyrogram.",
+    "keywords": [
+        "pyrogram",
+        "docker",
+        "telegram-bot"
+    ],
+    "repository": "https://github.com/Alex638796/masterexpro",
+    "stack": "container",
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Telegram Bot Token from @BotFather",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Telegram API ID from my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Telegram API Hash from my.telegram.org",
+            "required": true
+        },
+        "DB_URL": {
+            "description": "MongoDB connection URL (e.g. from MongoDB Atlas free tier)",
+            "required": true
+        },
+        "ADMIN_ID": {
+            "description": "Admin user IDs, comma separated (your numeric Telegram user ID)",
+            "required": false
+        },
+        "OWNER_ID": {
+            "description": "Bot owner Telegram user ID",
+            "required": false
+        },
+        "DB_NAME": {
+            "description": "MongoDB database name",
+            "value": "master_extractor",
+            "required": false
+        },
+        "AUTH_LOG": {
+            "description": "Auth log channel ID (bot must be admin there). Leave 0 to skip -- premium-grant actions just won't be logged.",
+            "value": "0",
+            "required": false
+        },
+        "CHANNEL": {
+            "description": "Main channel ID used for the force-subscribe check (bot must be admin there). Leave 0 to skip -- force-subscribe check won't work.",
+            "value": "0",
+            "required": false
+        },
+        "PREMIUM_LOGS": {
+            "description": "Premium logs channel ID. Leave 0 to skip -- premium-purchase logging just won't happen.",
+            "value": "0",
+            "required": false
+        },
+        "CH_URL": {
+            "description": "Your channel's invite link, shown on join buttons.",
+            "required": false
+        },
+        "OWNER": {
+            "description": "Owner's Telegram profile link, shown to users.",
+            "required": false
+        },
+        "THUMB_URL": {
+            "description": "Default thumbnail image URL.",
+            "required": false
+        },
+        "BOT_TEXT": {
+            "description": "Bot display name.",
+            "value": "Master Extractor",
+            "required": false
+        },
+        "BOT_USERNAME": {
+            "description": "Bot username, without @.",
+            "required": false
+        }
+    },
+    "addons": [],
+    "buildpacks": []
+}

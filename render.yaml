@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: masterexpro
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: DB_URL
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: DB_NAME
+        value: master_extractor
+      - key: AUTH_LOG
+        value: "0"
+      - key: CHANNEL
+        value: "0"
+      - key: PREMIUM_LOGS
+        value: "0"
